@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Modal from 'react-bootstrap/Modal'
 import Tooltip from '@material-ui/core/Tooltip'
 import UserContext from '../../utils/UserContext'
-import contactState from '../../pages/Contact'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -105,11 +104,11 @@ const Form = () => {
               name="namee"
               value={namee}
               onChange={
-                contactState.handleInputChange
+                handleInputChange
                 // console.log('hellloooooo')
               } />
 
-            {/* <TextField
+            <TextField
               className={classes.pos}
               size="small"
               id="outlined-basic"
@@ -146,7 +145,7 @@ const Form = () => {
               onChange={
                 handleInputChange
                 // console.log('comment')
-              } /> */}
+              } />
 
           </form>
         </Modal.Body>
@@ -165,7 +164,6 @@ const Form = () => {
 
         </Modal.Footer>
       </Modal>
-
 
     </>
   )

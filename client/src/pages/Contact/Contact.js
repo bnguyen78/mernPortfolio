@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography';
 import Form from '../../components/Form'
 import UserAPI from '../../utils/UserAPI'
+import UserContext from '../../utils/UserContext'
 
 
 const useStyles = makeStyles(theme => ({
@@ -45,21 +46,23 @@ const Contact = () => {
     }
 
     console.log(contact)
-  //   addUser(contact)
-  //   .then(({ data }) => {
-  //     console.log(data)
-  //     setContactState({
-  //       name: '',
-  //       email: '',
-  //       phone: '',
-  //       comment: ''
-  //     })
-  //   })
-  //   .catch(e => console.log(e))
+    addUser(contact)
+    .then(({ data }) => {
+      console.log(data)
+      setContactState({
+        name: '',
+        email: '',
+        phone: '',
+        comment: ''
+      })
+    })
+    .catch(e => console.log(e))
   }
   
   return (
     <div className={classes.root}>
+      <UserContext.Provider value={contactState}>
+
       
     <Paper id="paper"variant="outlined" elevation={3}>
       <h1>Contact Me</h1>
@@ -70,6 +73,7 @@ const Contact = () => {
 
       <Form />
       </Paper>
+      </UserContext.Provider>
       </div>
   )
 }
