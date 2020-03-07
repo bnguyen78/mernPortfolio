@@ -17,12 +17,12 @@ const App = () => {
           <About />
         </Route>
 
-        <Route path="/portfolio">
+        <Route exact path="/portfolio">
           <Navbar />
           <Portfolio />
         </Route>
 
-        <Route path="/contact">
+        <Route exact path="/contact">
           <Navbar />
           <Contact />
         </Route>
