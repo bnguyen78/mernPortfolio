@@ -1,6 +1,6 @@
 import React from 'react'
 import Breadcrumbs from '@material-ui/core/Breadcrumbs'
-import NavLink from '@material-ui/core/Link'
+import Link from '@material-ui/core/Link'
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 
@@ -36,21 +36,21 @@ const Navbar =() => {
     <Box display={{ xs: 'none', sm: 'none', md: 'block' }} m={0} width="100%">
       <div className={classes.root}>
     <Breadcrumbs aria-label="breadcrumb">
-      <NavLink color="inherit" href="/" >
+      <Link color="inherit" href="/" >
         About Me
-      </NavLink>
+      </Link>
 
-      <NavLink color="inherit" href="/portfolio">
+      <Link color="inherit" href="/portfolio">
         Portfolio
-      </NavLink>
+      </Link>
 
-      <NavLink
+      <Link
         color="textPrimary"
         href="/contact"
         aria-current="page"
       >
         Contact Me
-      </NavLink>
+      </Link>
     </Breadcrumbs>
     </div>
     </Box>
